@@ -1,12 +1,12 @@
-import NavBar from "./components/NavBar"
-import ItemListContainer from "./components/ItemListContainer";
+import Header from "./components/Header/Header"
+import Main from "./components/Main/Main"
+
 
 function App() {
   return (
-    
     <body className="App">
-      <NavBar/>
-      <ItemListContainer/>
+      <Header/>
+      <Main/>
     </body>
   );
 }
