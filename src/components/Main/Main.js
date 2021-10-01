@@ -1,9 +1,13 @@
 // Main component
-import ItemListContainer from "ItemListContainer/ItemListContainer"
+import ItemListContainer from "./Inicio/ItemListContainer/ItemList"
+import Banner from "./Inicio/Banner/Banner"
 
 const Main = () => {
     return (
-        <ItemListContainer/>
+        <main>
+            <Banner/>
+            <ItemListContainer/>
+        </main>
     );
 }
 

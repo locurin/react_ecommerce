@@ -1,5 +1,5 @@
 // header component
-import Navbar from "Navbar/Navbar"
+import Navbar from "./Navbar/Navbar"
 
 const Header = () => {
     return (
