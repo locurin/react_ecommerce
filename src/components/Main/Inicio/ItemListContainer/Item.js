@@ -4,9 +4,7 @@ const Item = () => {
         <article>
             <h3>Remera chula</h3>
             <ul>
-                <li>Descripción: remera de verano</li>
-                <li>precio: $500</li>
-                <li>stock: 5</li>
+                {["Descripción: remera de verano", "precio: $500", "stock: 5"].map(listItem => <li>{listItem}</li>)}
             </ul>
             <button className="btn btn-primary">Comprar</button>
         </article>

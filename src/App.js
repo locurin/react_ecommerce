@@ -4,10 +4,10 @@ import Main from "./components/Main/Main"
 
 function App() {
   return (
-    <body className="App">
+    <>
       <Header/>
       <Main/>
-    </body>
+    </>
   );
 }
 

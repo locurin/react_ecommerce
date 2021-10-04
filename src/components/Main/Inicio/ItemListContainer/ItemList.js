@@ -1,16 +1,13 @@
 import Item from "../ItemListContainer/Item"
+import ReactDelayRender from 'react-delay-render'
 
 // contains the main list of elements on sale
 const ItemList = () => {
-    setTimeout(() => returnItem(), 3000) 
-}
-
-function returnItem() {
     return (
         <section>
             <Item/>
         </section>
-    );
+    )
 }
 
-export default ItemList
+export default ReactDelayRender({ delay: 3000 })(ItemList);
