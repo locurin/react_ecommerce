@@ -1,4 +1,4 @@
-import Item from "./Item"
+import Item from './Item'
 import ReactDelayRender from 'react-delay-render'
 
 // contains the main list of elements on sale
@@ -10,4 +10,4 @@ const ItemList = () => {
     )
 }
 
-export default ReactDelayRender({ delay: 3000 })(ItemList);
+export default ReactDelayRender({ delay: 3000 })(ItemList)

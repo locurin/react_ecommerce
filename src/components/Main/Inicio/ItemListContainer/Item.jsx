@@ -4,10 +4,10 @@ const Item = () => {
         <article>
             <h3>Remera chula</h3>
             <ul>
-                {["Descripción: remera de verano", "precio: $500", "stock: 5"].map(listItem => <li>{listItem}</li>)}
+                {['Descripción: remera de verano', 'precio: $500', 'stock: 5'].map(listItem => <li>{listItem}</li>)}
             </ul>
-            <button className="btn btn-primary">Comprar</button>
+            <button className='btn btn-primary'>Comprar</button>
         </article>
-    );
+    )
 }
-export default Item;
+export default Item

@@ -1,6 +1,6 @@
-import {BrowserRouter, Switch, Route} from "react-router-dom"
-import Header from "./components/Header/Header"
-import Home from "./components/Main/Inicio/Home"
+import {BrowserRouter, Switch, Route} from 'react-router-dom'
+import Header from './components/Header/Header'
+import Home from './components/Main/Inicio/Home'
 
 
 function App() {
@@ -23,7 +23,7 @@ function App() {
       </Switch>
       <footer>FOOTER LOW-COST</footer>
     </BrowserRouter>
-  );
+  )
 }
 
-export default App;
+export default App

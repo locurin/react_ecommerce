@@ -1,6 +1,6 @@
 // Main component for Homepage
-import ItemListContainer from "./ItemListContainer/ItemList"
-import Banner from "./Banner/Banner"
+import ItemListContainer from './ItemListContainer/ItemList'
+import Banner from './Banner/Banner'
 
 const Home = () => {
     return (
@@ -11,4 +11,4 @@ const Home = () => {
     );
 }
 
-export default Home;
+export default Home
