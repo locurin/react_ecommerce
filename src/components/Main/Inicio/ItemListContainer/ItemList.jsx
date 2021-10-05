@@ -1,4 +1,4 @@
-import Item from "../ItemListContainer/Item"
+import Item from "./Item"
 import ReactDelayRender from 'react-delay-render'
 
 // contains the main list of elements on sale
