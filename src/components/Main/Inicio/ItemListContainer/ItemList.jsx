@@ -10,4 +10,4 @@ const ItemList = () => {
     )
 }
 
-export default ReactDelayRender({ delay: 3000 })(ItemList)
+export default ReactDelayRender({ delay: 2000 })(ItemList)
