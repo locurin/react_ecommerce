@@ -2,7 +2,7 @@
 const Banner = () => {
     return (
         <section>
-            <h1>BULLWORTH SHOP</h1>
+            <h1>SHIVAO GANJA SHOP</h1>
         </section>
     );
 }

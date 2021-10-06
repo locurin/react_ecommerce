@@ -8,17 +8,23 @@ function App() {
     <BrowserRouter>
       <Header/>
       <Switch>
-        <Route exact path='/'>
-        <Home/>
+        <Route exact path={'/'}>
+          <Home/>
         </Route>
-        <Route exact path='/nosotros'>
+        <Route path={'/carrito'}>
           <div><p>FOOOOO</p></div>
         </Route>
-        <Route exact path='/showroom'>
+        <Route path={'/quiz'}>
           <div><p>aeeeea soy sabalero</p></div>
         </Route>
-        <Route exact path='/contacto'>
+        <Route path={'/contacto'}>
           <div><p>LLAME YA</p></div>
+        </Route>
+        <Route path={`/category`}>
+          <div><p>CATEGORIA</p></div>
+        </Route>
+        <Route path={`/item`}>
+          <div><p>ITEM</p></div>
         </Route>
       </Switch>
       <footer>FOOTER LOW-COST</footer>
