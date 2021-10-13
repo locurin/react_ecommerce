@@ -1,6 +1,7 @@
 import {BrowserRouter, Switch, Route} from 'react-router-dom'
 import Header from './components/Header/Header'
 import Home from './components/Main/Inicio/Home'
+import Footer from './components/Footer/Footer'
 
 
 function App() {
@@ -27,7 +28,7 @@ function App() {
           <div><p>ITEM</p></div>
         </Route>
       </Switch>
-      <footer>FOOTER LOW-COST</footer>
+      <Footer/>
     </BrowserRouter>
   )
 }

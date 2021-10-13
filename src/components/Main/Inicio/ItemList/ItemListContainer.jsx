@@ -1,14 +1,16 @@
 import Item from './Item'
 import DateAndFilters from './DateAndFilters'
 import ReactDelayRender from 'react-delay-render'
+import TempDatabase from '../../../../database/TempDatabase'
+
 
 // contains the main list of elements on sale
 const ItemListContainer = () => {
     return (
-        <section>
+        <>
             <DateAndFilters/>
-            <Item/>
-        </section>
+            <Item data={TempDatabase()}/>
+        </>
     )
 }
 

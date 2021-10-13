@@ -2,9 +2,6 @@
 import CurrentDate from "./CurrentDate"
 
 const DateAndFilters = () => {
-
- 
-
     return (
         <section>
             <CurrentDate/>
