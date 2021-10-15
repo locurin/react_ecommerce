@@ -8,11 +8,12 @@ const Cart = () => {
             {cart.map((item, index) => {
                 return (
                     <ul key={index}>
-                        <li>{item.id}</li>
-                        <li>{item.name}</li>
-                        <li>{item.category}</li>
-                        <li>${item.price}</li>
-                        <li>{item.description}</li>
+                        <li>id: {item.id}</li>
+                        <li>nombre: {item.name}</li>
+                        <li>categoria: {item.category}</li>
+                        <li>precio unitario: ${item.price}</li>
+                        <li>descripcion: {item.description}</li>
+                        <li>Cantidad a comprar: {index}</li>
                     </ul>
                 )
                 })
