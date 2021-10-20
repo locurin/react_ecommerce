@@ -9,9 +9,10 @@ const ItemDetails = () => {
     const {itemId} = useParams()
     const item = TempDatabase().find(item => item.id === Number(itemId))
 
-    const [cart, setCart, isInCart] = useContext(CartContext)
+    const [cart, setCart, isInCart, removeFromCart] = useContext(CartContext)
     
     const addToCart = () => {
+        console.table(cart)
         const quantity = Number(document.querySelector('#cantidadItems').value)
         const product = {
             id: item.id,
@@ -41,6 +42,7 @@ const ItemDetails = () => {
                 <input id='cantidadItems' type='number' placeholder='Cantidad a comprar' required/>
             </form>
             <button className='btn btn-success' onClick={addToCart}>Agregar al carrito</button>
+            <button className='btn btn-danger' onClick={() => removeFromCart(1)}>Quitar</button>
         </article>
     )
 }
