@@ -1,20 +1,24 @@
 import { createContext, useState } from "react"
 
+// declare the cart context
 export const CartContext = createContext()
 
+// declare the cart context provider
 export const CartProvider = (props) => {
 
+    // handle the cart state
     const [cart, setCart] = useState([])
 
+    // check if a product is already in the cart
     const isInCart = id => {
         return cart.find(product => product.id === id) ? true : false
     }
     
-    const removeFromCart = id => {
-        let temp = cart
-        temp = temp.splice(id, 1)
-        alert('aaaaaaaaaaaaaaaaaaaa')
-        setCart(temp)
+    // remove a product from the cart
+    const removeFromCart = index => {
+        let newCart = cart
+        newCart.splice(index, 1)
+        setCart(newCart)
     }
 
     return( 

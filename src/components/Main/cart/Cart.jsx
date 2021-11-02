@@ -1,12 +1,23 @@
 import { useContext, useState } from "react"
 import { CartContext } from "../../../context/CartContext"
 
+// Displays the cart view of the application
 const Cart = () => {
     const [cart, setCart, isInCart, removeFromCart] = useContext(CartContext)
-    if (cart === null) {
+    const [items, setItems] = useState(cart)
+
+    // Updates the cart when an item is removed
+    const removeItem = (index) => {
+        removeFromCart(index)
+        const newItemsList = items.filter(item => item.key !== index)
+        setItems(newItemsList)
+    }
+
+    // if the cart is empty, display a message, else display the cart view
+    if (items.length === 0) {
         return <div>NADA QUE MOSTRAR</div>
     } else {
-        return (cart && cart.map((item, index) => {
+        return (items.map((item, index) => {
             return (
                 <ul key={index}>
                     <li>id: {item.id}</li>
@@ -15,7 +26,7 @@ const Cart = () => {
                     <li>precio unitario: ${item.price}</li>
                     <li>descripcion: {item.description}</li>
                     <li>Cantidad a comprar: {item.quantity}</li>
-                    <button className="btn btn-danger" onClick={() => removeFromCart(index)}>Quitar</button>
+                    <button className="btn btn-danger" onClick={() => removeItem(index)}>Quitar</button>
                 </ul>
             )
         }))
