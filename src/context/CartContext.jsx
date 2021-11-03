@@ -42,7 +42,7 @@ export const CartProvider = (props) => {
     }
     
     // remove a product from the cart
-    const removeFromCart = (index, items) => {
+     const removeFromCart = (index, items) => {
         let newCart = cart
         newCart.splice(index, 1)
         setCart(newCart)
@@ -56,3 +56,4 @@ export const CartProvider = (props) => {
         </CartContext.Provider>
     )
 }
+
