@@ -3,7 +3,7 @@ import { CartContext } from "../../../context/CartContext"
 
 const CartItem = (props) => {
 
-    const [cart, setCart, items, setItems, isInCart, addToCart, removeFromCart] = useContext(CartContext)
+    const [cart, setCart, items, setItems, isInCart, addToCart, removeFromCart, subtotal, setSubtotal] = useContext(CartContext)
     const numbers = {
         price: Number(props.item.price),
         quantity: Number(props.item.quantity),
@@ -18,16 +18,48 @@ const CartItem = (props) => {
                 quantity: digits.quantity + 1,
                 total: digits.price * (digits.quantity + 1)
             })
+            setSubtotal(
+                {price: subtotal.price + digits.price,
+                 products: subtotal.products,
+                 items: subtotal.items + 1,
+                })
         } 
         else {
-            setDigits({
-                ...digits,
-                quantity: digits.quantity - 1,
-                total: digits.price * (digits.quantity - 1)
-            })
+            if (digits.quantity === 1) {
+                removeFromCart(props.index, props.items)
+                setSubtotal(
+                    {price: subtotal.price - digits.price,
+                    products: subtotal.products - 1,
+                    items: subtotal.items - 1
+                })
+            } else {
+                setDigits({
+                    ...digits,
+                    quantity: digits.quantity - 1,
+                    total: digits.price * (digits.quantity - 1)
+                })
+                setSubtotal(
+                    {price: subtotal.price - digits.price,
+                    products: subtotal.products,
+                    items: subtotal.items - 1
+                })
+            }
         }
+        updateCartData(props.item.id)
+        
     }
-
+  // find the item with an id equal to itemID and replace it in the cart
+  const updateCartData = (itemId) => {
+    console.table(digits)
+    const newCart = cart
+    newCart.forEach(item => {
+        if (item.id === itemId) {
+            item.quantity = digits.quantity
+            item.total = digits.total
+        }
+    })
+    setCart(newCart)
+}
 
     return (
         <ul key={props.index}>

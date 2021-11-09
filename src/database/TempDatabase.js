@@ -6,6 +6,8 @@ function itemOnSale(id, name, category, price, description) {
     this.category = category
     this.price = price
     this.description = description
+    this.quantity = 0
+    this.subtotal = price
 }
 
 const item1 = new itemOnSale(1, 'kush-47', 'sativa', 300, 'pega como padrastro borracho')

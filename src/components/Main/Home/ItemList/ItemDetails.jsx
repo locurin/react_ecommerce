@@ -20,7 +20,7 @@ const ItemDetails = () => {
                 <li>{`Descripción: ${item.description}`}</li>
             </ul>
             <form>
-                <input id='cantidadItems' type='number' placeholder='Cantidad a comprar' required/>
+                <input id='cantidadItems' type='number' min='0' placeholder='Cantidad a comprar' required/>
             </form>
             <button className='btn btn-success' onClick={() => addToCart(document.getElementById('cantidadItems').value, item)}>Agregar al carrito</button>
             <button className='btn btn-danger' onClick={() => removeFromCart(1)}>Quitar</button>
