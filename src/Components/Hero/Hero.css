@@ -1,0 +1,12 @@
+.heroImage {
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    url("../../assets/foto-plant-person-2.jpg") center/cover no-repeat;
+  margin: 10px;
+  border-radius: 2%;
+  margin: 1%;
+}
+
+.heroTitle {
+  color: white;
+  text-align: left;
+}

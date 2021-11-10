@@ -1,0 +1,10 @@
+.logoImg {
+  height: 35px;
+}
+.linkNav {
+  color: black;
+  font-size: 20px;
+}
+.linkNav:hover {
+  color: green;
+}

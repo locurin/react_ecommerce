@@ -1,0 +1,11 @@
+.cardProduct {
+  border: none;
+  background-color: rgb(219, 235, 194);
+  align-items: center;
+  padding: 5px;
+  margin: 5px;
+}
+.cardImg {
+  height: 200px;
+  width: auto;
+}

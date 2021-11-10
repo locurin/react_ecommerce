@@ -1,0 +1,7 @@
+.cartIcon {
+  color: black;
+}
+.cartIcon:hover {
+  color: green;
+  text-decoration: none;
+}

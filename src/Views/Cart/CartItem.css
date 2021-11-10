@@ -1,0 +1,10 @@
+.item {
+  background-color: rgb(219, 235, 194);
+  margin: 12px;
+  text-align: center;
+  border-radius: 1%;
+}
+.cartImg {
+  height: 200px;
+  width: auto;
+}
